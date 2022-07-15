@@ -118,15 +118,29 @@ header.sticky{
     }
     .navlist{
         position: absolute;
-        top: 100%;
+        top: -600px;
         left: 0;
         right: 0;
         background: var(--main-color);
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         transition: .3s;
     }
     .navlist a{
         color: var(--bg-color);
     }
+    .navlist a:hover{
+        color: rgb(184, 233, 231);
+        transform: scale(1.1);
+    }
+    .navlist li{
+        margin: 20px;
+    }
+    .navlist a::after{
+        display: none;
+    }
+    .navlist.active{
+        top: 100%;
+    }
+
 }
